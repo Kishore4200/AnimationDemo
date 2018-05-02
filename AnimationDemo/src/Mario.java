@@ -24,16 +24,14 @@ public class Mario extends Sprite {
 	}
 
 	public void act(ArrayList<Shape> obstacles) {
-		System.out.println("act called");
-		y += 10;
-//		moveByAmount(0, -10);
-//		boolean touching = false;
-//		for (Shape s : obstacles) {
-//			if (s.intersects(this)) touching = true;
-//		}
-//		while (!touching) {
-//			moveByAmount(10, -10);
-//		}
+		boolean touching = false;
+		for (Shape s : obstacles) {
+			touching = ((s.intersects(this)));
+		}
+		System.out.println(touching);
+		if (!touching) {
+			y += 1;
+		}
 		// FALL (and stop when a platform is hit)
 	}
 

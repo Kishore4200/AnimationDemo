@@ -16,10 +16,12 @@ public class Mario extends Sprite {
 
 	// METHODS
 	public void walk(int dir) {
+	x += dir;
 		// WALK!
 	}
 
 	public void jump() {
+	y -= 10;	
 		// JUMP!
 	}
 
